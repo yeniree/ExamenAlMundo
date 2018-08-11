@@ -30,3 +30,12 @@ Ejecutar los siguientes comandos:
 
 Con este ultimo comando, se ejecutara la pagina web en la url http://localhost:4200/
 
+# para generar paquete productivo
+
+Ejecutar el comando.
+
+1 - ng build
+
+Esto genera la carpeta dist/
+
+
