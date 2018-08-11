@@ -3,10 +3,11 @@ Api Rest Node Js + Angular 6
 
 # Para la levantar la api
 
-#Ingresar al directorio api
+# Ingresar al directorio api
 Ejecutar los siguientes comandos:
 
 1 - npm install
+
 2 - node controller.js
 
 La api rest levanta en el puerto 3000, para probarla directamente se debe acceder por la url 
