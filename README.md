@@ -1,5 +1,5 @@
 # ExamenAlMundo
-Api Rest Node Js + Angular 6
+Api Rest Node Js v 8.11.3 + Angular 6
 
 # Para la levantar la api
 
