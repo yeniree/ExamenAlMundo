@@ -1,0 +1,134 @@
+
+body {
+    background: #eee;
+    font-size: 14px;
+}
+
+h4{
+    color: #0679B3;
+}
+
+.btn.btn-primary{
+    background: #0679B3;
+}
+
+header {
+    background: #14427E;
+    padding: 20px;    
+}
+
+div.container-fluid {
+    margin-top: 20px; 
+}
+
+.text-search{
+    color: #0679B3;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+.icon-search {
+    background-image: url('./icons/filters/search.svg');
+    background-repeat: repeat-x;
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    fill:red;
+}
+.icon-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+}
+
+.icon-5-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 75px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.icon-4-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 60px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.icon-3-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 45px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+.icon-2-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 30px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+.icon-1-stars{
+    background-image: url('./icons/filters/star.svg');
+    background-repeat: repeat-x;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+}
+
+.star-options{
+    color: #59595C;
+    font-weight: bold;
+    margin-top: 10px;
+}
+div.star-options span{
+    margin-left: 5px;
+}
+
+.search-name{
+    margin-top: 10px;
+}
+.hotel-img img{    
+    width: 95%;   
+}
+.icon-amenities{
+    margin-top: 20px;
+    display: inline-block;
+    padding: 3px;
+}
+.hotel-name{
+    border-color: #59595C; 
+    border-right-style: dotted; 
+    border-right-width: 1px;
+}
+.hotel-price-info{
+    color: #59595C;
+    font-size: 14px;
+    text-align: center;
+}
+.price{
+    margin-top: 20px;
+    color: #E16800;    
+    font-size: 18px;
+    text-align: center;
+}
+.price span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.hotel-info{
+    padding: 30px;
+}

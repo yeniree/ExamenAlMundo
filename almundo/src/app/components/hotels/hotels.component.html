@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-lg-4">
+            <ul class="list-group">
+                <li class="list-group-item ">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" (click)="showFilter()">
+                        <strong>Filtros</strong>
+                    </a>
+                </li>
+                <li class="list-group-item" *ngIf="show">
+                    <div class="name-hotel">
+                        <span class="icon-search"></span>
+                        <span class="text-search">Nombre del Hotel</span>
+                    </div>
+                    <div class="search-name">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Ingrese el nombre del hotel" />
+                            <div class="input-group-append">
+                                <button (click)="getHotels()" class="btn btn-primary" type="button" id="button-search">Buscar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </li>
+                <li class="list-group-item"  *ngIf="show">
+                    <div class="star">
+                        <span class="icon-stars"></span>
+                        <span class="text-search">Estrellas</span>
+                    </div>
+                    <div class="search-star">
+                        <div class="star-options">
+                            <input type="checkbox" value="" (click)="onClick($event)" />
+                            <span>Todas las estrellas</span>
+                        </div>
+                        <div class="star-options">
+                            <input type="checkbox" value="5" (click)="onClick($event)" />
+                            <span class="icon-5-stars"></span>
+                        </div>
+                        <div class="star-options">
+                            <input type="checkbox" value="4" (click)="onClick($event)" />
+                            <span class="icon-4-stars"></span>
+                        </div>
+                        <div class="star-options">
+                            <input type="checkbox" value="3" (click)="onClick($event)" />
+                            <span class="icon-3-stars"></span>
+                        </div>
+                        <div class="star-options">
+                            <input type="checkbox" value="2" (click)="onClick($event)" />
+                            <span class="icon-2-stars"></span>
+                        </div>
+                        <div class="star-options">
+                            <input type="checkbox" value="1" (click)="onClick($event)" />
+                            <span class="icon-1-stars"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-lg-8">
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let hotel of hotels">
+                    <div class="hotel-details row">
+                        <div class="hotel-img col-sm-12 col-lg-5">
+                            <img src='./src/assets/images/hotels/{{hotel.image}}' />
+                        </div>
+                        <div class="col-sm-12 col-lg-4 border-right">
+                            <h4>{{hotel.name}}</h4>
+                            <span class="icon-{{hotel.stars}}-stars"></span>
+                            <div *ngFor='let amenity of hotel.amenities' class="icon-amenities">
+                                <img src='./src/assets/icons/amenities/{{amenity}}.svg' width="15px" />
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-3 hotel-info">
+                            <div class="hotel-price-info">Precio por noche por habitación</div>
+                            <div class="price">ARS
+                                <span>{{hotel.price}}</span>
+                            </div>
+                            <div class="price">
+                                <button class="btn btn-primary">Ver Hotel</button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
