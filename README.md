@@ -17,3 +17,16 @@ La api rest levanta en el puerto 3000, para probarla directamente se debe accede
 Para filtros, se debe enviar como parametro los filtos (name, stars)
 Por ejemplo: http://localhost:3000/hoteles?name=xxx&stars=xxx
 
+
+# Para levantar la web
+
+Ingresar al directorio almundo.
+
+Ejecutar los siguientes comandos:
+
+1 - npm install
+
+2 - ng serve --open
+
+Con este ultimo comando, se ejecutara la pagina web en la url http://localhost:4200/
+
