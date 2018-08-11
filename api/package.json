@@ -1,0 +1,17 @@
+{
+	"name": "api",
+	"version": "1.0.0",
+	"description": "Examen Técnico Al Mundo",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Yeniree Sanchez",
+	"license": "ISC",
+	"dependencies": {
+		"angular": "^1.7.3",
+		"body-parser": "^1.18.3",
+		"content-filter": "^1.1.2",
+		"express": "^4.16.3"
+	}
+}
