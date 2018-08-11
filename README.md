@@ -3,7 +3,8 @@ Api Rest Node Js + Angular 6
 
 # Para la levantar la api
 
-# Ingresar al directorio api
+Ingresar al directorio api.
+
 Ejecutar los siguientes comandos:
 
 1 - npm install
