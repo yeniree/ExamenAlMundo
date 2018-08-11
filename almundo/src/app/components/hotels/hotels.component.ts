@@ -13,9 +13,9 @@ export class HotelsComponent {
   title = 'Al Mundo';
   private apiUrl = 'http://localhost:3000/hoteles';
   private hotels: any = [];
-  public stars: string = '';
   public name: string = '';
   public show: boolean = true;
+  public list: any = [];
 
   constructor() {
     this.getHotels();
@@ -23,7 +23,8 @@ export class HotelsComponent {
 
 
   getData() {
-    return ajax(this.apiUrl + '?name=' + this.name + '&stars=' + this.stars).pipe(
+    console.log(JSON.stringify(this.list))
+    return ajax(this.apiUrl + '?name=' + this.name + '&stars=' + JSON.stringify(this.list)).pipe(
       map(res => {
         if (!res.response) {
           throw new Error('Value expected!');
@@ -47,7 +48,12 @@ export class HotelsComponent {
   }
 
   onClick(event) {
-    this.stars = event.target.value;
+    this.list.push(event.target.value);    
+    this.getHotels();
+  }
+
+  reset() {
+    this.list=[];    
     this.getHotels();
   }
 
