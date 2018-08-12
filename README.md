@@ -43,7 +43,7 @@ Con este ultimo comando, se ejecutara la pagina web en la url http://localhost:4
 
 Ejecutar el comando.
 
-1 - ng build --prod (el puerto de la api, esta configurado en la carpeta enviroment por ambientes)
+1 - ng build --prod (el puerto de la api, esta configurado en la carpeta environments por ambientes)
 
 Esto genera la carpeta dist/
 
