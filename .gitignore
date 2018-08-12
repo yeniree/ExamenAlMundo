@@ -1,3 +1,4 @@
 # dependencies
 /api/node_modules
 /almundo/node_modules
+/almundo/dist

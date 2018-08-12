@@ -2,6 +2,7 @@ var express = require('express');
 var http = require('http');
 var fs = require('fs');
 var filter = require('content-filter');
+var config = require("./config")();
 
 var app = express();
 
@@ -39,8 +40,9 @@ app.get('/hoteles', (req, res) => {
 	if (validName || validStars) {
 		filterData = jsonData.filter(hotel => {
 			let retorno;
-			let hotelname = String(hotel.name);
-			let hotelstars = hotel.stars;			
+			let hotelname = hotel.name.toLowerCase();
+			let hotelstars = hotel.stars;
+			name = name.toLowerCase();			
 
 			if (validName && validStars) {
 				retorno = hotelname.indexOf(name) > -1 && stars.indexOf(hotelstars) > -1;
@@ -62,7 +64,7 @@ app.get('/', (req, res) => {
 	res.status(200).send('Welcome to API REST');
 });
 
-http.createServer(app).listen(3000, () => {
-	console.log('Server started at http://localhost:3000');
+http.createServer(app).listen(config.port, () => {
+	console.log('Server started at http://localhost:' + config.port);
 });
 

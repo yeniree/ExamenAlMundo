@@ -7,15 +7,27 @@ Ingresar al directorio api.
 
 Ejecutar los siguientes comandos:
 
-1 - npm install
+npm install
 
-2 - node controller.js
+=============================================================================================
+Para desarrollo
+=============================================================================================
 
-La api rest levanta en el puerto 3000, para probarla directamente se debe acceder por la url 
-    http://localhost:3000/hoteles
+node controller.js NODE_ENV=development
+
+Si la api rest levanta en desarrollo, lo hace en el puerto 8080: http://localhost:8080/hoteles
+
+=============================================================================================
+Para produccion
+=============================================================================================
+
+node controller.js NODE_ENV=production
+
+Si la api rest levanta en produccion, lo hace en el puerto 8081: http://localhost:8081/hoteles
 
 Para filtros, se debe enviar como parametro los filtos (name, stars)
-Por ejemplo: http://localhost:3000/hoteles?name=xxx&stars=xxx
+
+Por ejemplo: http://localhost:8080/hoteles?name=xxx&stars=[xxx]
 
 
 # Para levantar la web
@@ -34,7 +46,7 @@ Con este ultimo comando, se ejecutara la pagina web en la url http://localhost:4
 
 Ejecutar el comando.
 
-1 - ng build
+1 - ng build --prod (el puerto de la api, esta configurado en la carpeta enviroment por ambientes)
 
 Esto genera la carpeta dist/
 

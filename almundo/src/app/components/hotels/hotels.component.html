@@ -14,27 +14,26 @@
                     </div>
                     <div class="search-name">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Ingrese el nombre del hotel" />
+                            <input type="text" class="form-control" name="name" [(ngModel)]="name" (keyup)='getHotels()' placeholder="Ingrese el nombre del hotel"
+                            />
                             <div class="input-group-append">
                                 <button (click)="getHotels()" class="btn btn-primary" type="button" id="button-search">Buscar</button>
                             </div>
                         </div>
                     </div>
-
-                    
                 </li>
-                <li class="list-group-item"  *ngIf="show">
+                <li class="list-group-item" *ngIf="show">
                     <div class="star">
                         <span class="icon-stars"></span>
                         <span class="text-search">Estrellas</span>
                     </div>
                     <div class="search-star">
                         <div class="star-options">
-                            <input type="checkbox" (click)="reset()" checked='{{checkedDefault}}' />
+                            <input type="checkbox" (click)="reset()" [(ngModel)]='checkedDefault' name='checkedDefault' />
                             <span>Todas las estrellas</span>
                         </div>
                         <div class="star-options" *ngFor='let star of ArrayStars'>
-                            <input type="checkbox" value="{{star}}" (click)="onClick($event)" />
+                            <input type="checkbox" value="{{star}}" (click)="onClick($event)" [checked]="checkedDefault" />
                             <span class="icon-{{star}}-stars"></span>
                         </div>
                     </div>
@@ -65,6 +64,9 @@
                             </div>
                         </div>
                     </div>
+                </li>
+                <li class="list-group-item" *ngIf="hotels.length == 0">
+                    <p>No se encontraron resultados para esta búsqueda.</p>
                 </li>
             </ul>
         </div>
