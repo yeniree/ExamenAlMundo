@@ -13,18 +13,18 @@ npm install
 
 NODE_ENV=dev node index.js
 
-Si la api rest levanta en desarrollo, lo hace en el puerto 8080: http://localhost:8080/hoteles
+Si la api rest levanta en desarrollo, lo hace en el puerto 8080: http://localhost:8080//api/hotels/
 
 
 ## Para produccion
 
 NODE_ENV=prod node index.js
 
-Si la api rest levanta en produccion, lo hace en el puerto 8081: http://localhost:8081/hoteles
+Si la api rest levanta en produccion, lo hace en el puerto 8081: http://localhost:8081//api/hotels/
 
 Para filtros, se debe enviar como parametro los filtos (name, stars)
 
-Por ejemplo: http://localhost:8080/hoteles?name=xxx&stars=[xxx]
+Por ejemplo: http://localhost:8080/api/hotels/?name=xxx&stars=[xxx]
 
 
 # Para levantar la web
