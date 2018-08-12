@@ -11,14 +11,14 @@ npm install
 
 ## Para desarrollo
 
-node controller.js NODE_ENV=development
+NODE_ENV=dev node index.js
 
 Si la api rest levanta en desarrollo, lo hace en el puerto 8080: http://localhost:8080/hoteles
 
 
 ## Para produccion
 
-node controller.js NODE_ENV=production
+NODE_ENV=prod node index.js
 
 Si la api rest levanta en produccion, lo hace en el puerto 8081: http://localhost:8081/hoteles
 

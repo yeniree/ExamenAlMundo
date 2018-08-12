@@ -1,4 +1,6 @@
 {
+    "host":"localhost",
     "port": 8081,
-    "static_variable": "static"
+    "static_variable": "static",
+    "urlDb": "mongodb://localhost/nodejs"
 }

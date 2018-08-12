@@ -11,7 +11,7 @@ import { environment } from '../../../environments/environment';
 })
 
 export class HotelsComponent {
-  public apiUrl = environment.apiUrl + 'hoteles';
+  public apiUrl = environment.apiUrl + 'api/hotels';
   public hotels: any = [];
   public name: string = '';
   public show: boolean = true;
