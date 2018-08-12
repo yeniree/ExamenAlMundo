@@ -9,14 +9,14 @@ Ejecutar los siguientes comandos:
 
 npm install
 
-# Para desarrollo
+## Para desarrollo
 
 node controller.js NODE_ENV=development
 
 Si la api rest levanta en desarrollo, lo hace en el puerto 8080: http://localhost:8080/hoteles
 
 
-# Para produccion
+## Para produccion
 
 node controller.js NODE_ENV=production
 
@@ -39,7 +39,7 @@ Ejecutar los siguientes comandos:
 
 Con este ultimo comando, se ejecutara la pagina web en la url http://localhost:4200/
 
-# para generar paquete productivo
+## Para generar paquete productivo
 
 Ejecutar el comando.
 
