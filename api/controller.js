@@ -34,18 +34,22 @@ app.get('/hoteles', (req, res) => {
 
 	let filterData = jsonData;
 	let validName = name != undefined && name != '';
-	let validStars = stars != undefined && stars != '';
+	let validStars = stars != undefined && stars != '[]';
 
 	if (validName || validStars) {
 		filterData = jsonData.filter(hotel => {
 			let retorno;
 			let hotelname = String(hotel.name);
-			let hotelstars = String(hotel.stars);
+			let hotelstars = hotel.stars;			
 
 			if (validName && validStars) {
-				retorno = hotelname.indexOf(name) > -1 && stars.includes(hotelstars);
-			} else {
-				retorno = hotelname.indexOf(name) > -1 || stars.includes(hotelstars);
+				retorno = hotelname.indexOf(name) > -1 && stars.indexOf(hotelstars) > -1;
+			} 
+			if (!validName && validStars) {
+				retorno = stars.indexOf(hotelstars) > -1;
+			} 
+			if (validName && !validStars){
+				retorno = hotelname.indexOf(name) > -1;
 			}
 			return retorno;
 		});

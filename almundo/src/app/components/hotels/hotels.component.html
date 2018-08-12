@@ -30,28 +30,12 @@
                     </div>
                     <div class="search-star">
                         <div class="star-options">
-                            <input type="checkbox" (click)="reset()" />
+                            <input type="checkbox" (click)="reset()" checked='{{checkedDefault}}' />
                             <span>Todas las estrellas</span>
                         </div>
-                        <div class="star-options">
-                            <input type="checkbox" value="5" (click)="onClick($event)" />
-                            <span class="icon-5-stars"></span>
-                        </div>
-                        <div class="star-options">
-                            <input type="checkbox" value="4" (click)="onClick($event)" />
-                            <span class="icon-4-stars"></span>
-                        </div>
-                        <div class="star-options">
-                            <input type="checkbox" value="3" (click)="onClick($event)" />
-                            <span class="icon-3-stars"></span>
-                        </div>
-                        <div class="star-options">
-                            <input type="checkbox" value="2" (click)="onClick($event)" />
-                            <span class="icon-2-stars"></span>
-                        </div>
-                        <div class="star-options">
-                            <input type="checkbox" value="1" (click)="onClick($event)" />
-                            <span class="icon-1-stars"></span>
+                        <div class="star-options" *ngFor='let star of ArrayStars'>
+                            <input type="checkbox" value="{{star}}" (click)="onClick($event)" />
+                            <span class="icon-{{star}}-stars"></span>
                         </div>
                     </div>
                 </li>
